@@ -44,7 +44,7 @@ const Foods = ({ foodsFetch }) => {
 
         <div className=''>
             <div>
-                <h1 className='text-center text-2xl  md:text-6xl font-bold uppercase italic bg-gradient-to-l from-yellow-500 to-red-700 
+                <h1 className='text-center text-3xl  md:text-6xl font-bold uppercase italic bg-gradient-to-l from-yellow-500 to-red-700 
                text-transparent bg-clip-text'>
                     food collection
                 </h1>
