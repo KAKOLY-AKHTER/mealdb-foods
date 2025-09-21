@@ -75,7 +75,7 @@ const Foods = ({ foodsFetch }) => {
                         <ol className=''>
                             {
                                 cart.map(food => (
-                                    <div key={food.idMeal} className='flex gap-5 items-center text-center justify-center mb-3 mt-5'>
+                                    <div key={food.idMeal} className='flex gap-5 items-center text-center justify-center px-7 mb-3 mt-5'>
                                         <div className='text-green-600 text-md'>{food.strMeal}</div>
                                         <img className='h-16 w-16 rounded-lg' src={food.strMealThumb} alt={food.strMeal} />
                                            <button onClick={()=>handleRemoveFromCart(food.idMeal)}>❌</button>
