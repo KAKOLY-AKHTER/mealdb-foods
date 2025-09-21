@@ -11,8 +11,7 @@ const Food = ({ food,handleCart }) => {
 
 
     return (
-        <div className={` ${order ? "bg-gradient-to-t from-red-300 to-green-200 rounded-2xl items-center text-green-500 font-semibold flex justify-center shadow-xl text-md p-5 italic" : "  rounded-2xl items-center text-green-500 font-semibold flex justify-center shadow-xl text-md p-5 italic bg-gradient-to-t from-white to-yellow-300"}
-`}>
+        <div className={` ${order ? "bg-gradient-to-t from-red-300 to-green-200 rounded-2xl items-center text-green-500 font-semibold flex justify-center shadow-xl text-md p-5 italic" : "  rounded-2xl items-center text-green-500 font-semibold flex justify-center shadow-xl text-md p-5 italic bg-gradient-to-t from-white to-yellow-300"}`}>
             <div className=' space-y-2'>
                 <h1><span className='font-bold text-red-500'>Name</span> : {food.strMeal}</h1>
                 <p>

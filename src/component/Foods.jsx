@@ -4,13 +4,32 @@ import Food from './Food';
 const Foods = ({ foodsFetch }) => {
     const [cart, setCart] = useState([]);
 
+    // const handleCart = (food) => {
+    //     const newFood = [...cart, food];
+    //     console.log(newFood);
+    //     setCart(newFood)
+
+
+    // }
+
+
     const handleCart = (food) => {
-        const newFood = [...cart, food];
-        console.log(newFood);
-        setCart(newFood)
+  const exists = cart.find(item => item.idMeal === food.idMeal);
 
+  if (!exists) {
+    const newFood = [...cart, food];
+    setCart(newFood);
+  } else {
+    alert("Already in cart");
+  }
+};
 
+       const handleRemoveFromCart = idMeal=> {
+        // console.log('remove item from the cart', id)
 
+        const remainingCart = cart.filter(food => food.idMeal !== idMeal);
+        setCart(remainingCart);
+        removeFromCart(id);
     }
 
 
@@ -57,8 +76,10 @@ const Foods = ({ foodsFetch }) => {
                             {
                                 cart.map(food => (
                                     <div key={food.idMeal} className='flex justify-between items-center mb-3 mt-5'>
-                                        <div className='text-green-600'>{food.strMeal} ~</div>
+                                        <div className='text-green-600 text-base'>{food.strMeal}</div>
                                         <img className='h-16 w-16 rounded-lg' src={food.strMealThumb} alt={food.strMeal} />
+                                           <button onClick={()=>handleRemoveFromCart(food.idMeal)}>❌</button>
+
                                     </div>
                                 ))
                             }
